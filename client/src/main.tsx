@@ -5,6 +5,9 @@ import App from './App.tsx'
 import { BrowserRouter } from "react-router-dom";
 import {ClerkProvider} from "@clerk/clerk-react";
 import {dark} from "@clerk/themes";
+import "swiper/css";
+import "swiper/css/pagination";
+
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 

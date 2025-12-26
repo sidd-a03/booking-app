@@ -1,7 +1,10 @@
+import {HeroSection} from "../components";
 
 const Home = () => {
     return (
-        <div>Home</div>
+        <>
+            <HeroSection />
+        </>
     )
 }
 export default Home
