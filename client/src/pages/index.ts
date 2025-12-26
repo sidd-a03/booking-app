@@ -1,0 +1,6 @@
+export { default as Favorites } from './Favorites'
+export { default as Home } from './Home'
+export { default as MovieDetails } from './MovieDetails'
+export { default as MyBooking } from './MyBooking'
+export { default as SeatLayout } from './SeatLayout'
+export { default as Movies } from './Movies'
