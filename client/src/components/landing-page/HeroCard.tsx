@@ -6,7 +6,6 @@ import {Activity} from "react";
 const HeroCard = ({ movie }: HeroCardProps) => {
 
     const { title, genre, description, time, year, imagePath, backgroundImagePath } = movie;
-    console.log(movie);
     const navigate = useNavigate();
 
     return (

@@ -1,9 +1,12 @@
-import {HeroSection} from "../components";
+import {FeaturedSection, HeroSection} from "../components";
+
 
 const Home = () => {
     return (
         <>
             <HeroSection />
+            <FeaturedSection />
+
         </>
     )
 }
