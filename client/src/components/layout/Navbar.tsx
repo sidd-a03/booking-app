@@ -1,7 +1,7 @@
 import {Link, NavLink, type NavLinkRenderProps, useNavigate} from "react-router-dom";
 import {MenuIcon, SearchIcon, TicketPlus, XIcon} from "lucide-react";
-import {NavItems} from "../constants";
-import type {NavItemInterface} from "../types";
+import {NavItems} from "../../constants";
+import type {NavItemInterface} from "../../types";
 import {useState} from "react";
 import {useUser, useClerk, UserButton} from "@clerk/clerk-react";
 

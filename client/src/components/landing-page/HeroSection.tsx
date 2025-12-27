@@ -1,7 +1,7 @@
-import {HeroCardItems} from "../constants";
-import type {HeroCardItemInterface} from "../types";
+import {HeroCardItems} from "../../constants";
+import type {HeroCardItemInterface} from "../../types";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {HeroCard} from "./index.ts";
+import {HeroCard} from "../index.ts";
 import {Autoplay, Pagination} from "swiper/modules";
 
 

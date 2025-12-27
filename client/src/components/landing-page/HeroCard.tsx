@@ -1,6 +1,6 @@
 import {ArrowRight, CalendarIcon, ClockIcon} from "lucide-react";
 import {useNavigate} from "react-router-dom";
-import type { HeroCardProps } from "../types";
+import type { HeroCardProps } from "../../types";
 import {Activity} from "react";
 
 const HeroCard = ({ movie }: HeroCardProps) => {
