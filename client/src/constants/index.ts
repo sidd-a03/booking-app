@@ -31,16 +31,6 @@ export const NavItems: NavItemInterface[] = [
 export const HeroCardItems: HeroCardItemInterface[] = [
     {
         id: 1,
-        backgroundImagePath: '/assets/images/gog.png',
-        imagePath: '/assets/images/marvelLogo.svg',
-        title: 'Guardians of the Galaxy',
-        genre: 'Action | Adventure | Sci-Fi',
-        year: 2018,
-        time: '2h 8m',
-        description: 'In a post-apocalyptic world where cities ride on wheels and consume each other to survive, two people meet in London and try to stop a conspiracy.'
-    },
-    {
-        id: 2,
         backgroundImagePath: '/assets/images/batman.png',
         title: 'The Batman',
         genre: 'Action | Crime',
@@ -49,13 +39,23 @@ export const HeroCardItems: HeroCardItemInterface[] = [
         description: 'Batman is called to intervene when the mayor of Gotham City is murdered. Soon, his investigation leads him to uncover a web of corruption, linked to his own dark past.'
     },
     {
-        id: 3,
+        id: 2,
         backgroundImagePath: '/assets/images/onepiece.png',
         title: 'One Piece',
         genre: 'Anime',
         year: 1999,
         time: '2h 8m',
         description: 'One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. It follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as he explores the Grand Line in search of the mythical treasure known as the "One Piece" to become the next King of the Pirates.'
+    },
+    {
+        id: 3,
+        backgroundImagePath: '/assets/images/gog.png',
+        imagePath: '/assets/images/marvelLogo.svg',
+        title: 'Guardians of the Galaxy',
+        genre: 'Action | Adventure | Sci-Fi',
+        year: 2018,
+        time: '2h 8m',
+        description: 'In a post-apocalyptic world where cities ride on wheels and consume each other to survive, two people meet in London and try to stop a conspiracy.'
     },
     {
         id: 4,
