@@ -2,17 +2,45 @@ import {Link, NavLink, type NavLinkRenderProps, useNavigate} from "react-router-
 import {MenuIcon, SearchIcon, TicketPlus, XIcon} from "lucide-react";
 import {NavItems} from "../../constants";
 import type {NavItemInterface} from "../../types";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useUser, useClerk, UserButton} from "@clerk/clerk-react";
 
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isVisible, setIsVisible] = useState<boolean>(true);
     const { user } = useUser();
     const { openSignIn } = useClerk();
     const navigate = useNavigate();
 
     const navbarStyle = ({isActive}: NavLinkRenderProps): string => `hover:bg-primary-nav hover:rounded-full hover:px-3 hover:py-0.5 transition-all duration-200 ${isActive ? 'text-primary-nav hover:text-white font-semibold' : ''}`
+
+    useEffect(() => {
+        // Variable to store the last scroll position
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            // IF scrolling DOWN AND past the top (50px) -> Hide Navbar
+            if (currentScrollY > lastScrollY && currentScrollY > 50) {
+                setIsVisible(false);
+            }
+            // IF scrolling UP -> Show Navbar
+            else if (currentScrollY < lastScrollY) {
+                setIsVisible(true);
+            }
+
+            // Update lastScrollY for the next event trigger
+            lastScrollY = currentScrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     const navlinkHandler = (): void => {
         scrollTo(0,0);
@@ -20,7 +48,9 @@ const Navbar = () => {
     }
 
     return (
-        <div className="fixed z-50 top-0 flex justify-between items-center w-full px-6 py-5 md:px-16 lg:px-36">
+        <div className={`fixed z-50 top-0 flex justify-between items-center w-full px-6 py-5 md:px-16 lg:px-36 transition-transform duration-300 
+            ${isVisible ? 'translate-y-0' : '-translate-y-full'}
+        `}>
             <Link to="/">
                 <img src="/assets/images/logo.png" alt="Logo" className="w-32 h-auto" />
             </Link>
